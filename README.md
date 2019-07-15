@@ -1,24 +1,42 @@
-# README
+# TO-DO-TASK
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## tasks
 
-Things you may want to cover:
+column | type
+------------ | -------------
+id | integer
+title | string
+content | text
+start_time | datetime
+end_time | datetime
+priority | string
+status | string
+user_id | integer
 
-* Ruby version
+## users
 
-* System dependencies
+column | type
+------------ | -------------
+id | integer
+name | string
+password | string
+email | string
 
-* Configuration
+## tags
 
-* Database creation
+column | type
+------------ | -------------
+id | integer
+name | string
 
-* Database initialization
+## task_tags
 
-* How to run the test suite
+column | type
+------------ | -------------
+id | integer
+tag_id | integer
+task_id | integer
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
