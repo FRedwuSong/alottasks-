@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   database: to_do_task
   pool: 5
-  username: wusonghan
+  username: travis
   password:
   timeout: 5000
 
