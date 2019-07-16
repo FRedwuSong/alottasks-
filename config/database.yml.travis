@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: to_do_task
+  pool: 5
+  username: wusonghan
+  password:
+  timeout: 5000
+
+development:
+  <<: *default
+  database: to_do_task_db
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: to_do_task_db
+
+production:
+  <<: *default
+  database: to_do_task_db
