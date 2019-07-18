@@ -15,7 +15,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: to_do_task_db_test
+  database: to_do_task_db
 
 production:
   <<: *default
