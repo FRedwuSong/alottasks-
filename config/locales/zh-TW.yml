@@ -1,0 +1,16 @@
+zh-TW:
+  tasks:
+    create:
+      notice: "任務新增成功！"
+      alert: "任務新增失敗！"
+    update:
+      notice: "任務內容更新成功！"
+    destroy:
+      notice: "任務刪除成功！"
+  common:
+    title: "標題"
+    content: "內容"
+    edit: "編輯"
+    destroy: "刪除"
+    messages:
+      destroy: "確定要刪除嗎？"
