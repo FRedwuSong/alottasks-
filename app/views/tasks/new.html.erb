@@ -1,2 +1,15 @@
 <h1>Tasks#new</h1>
 <p>Find me in app/views/tasks/new.html.erb</p>
+<div>
+  <%= form_for @task do |f|%>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :content %>
+      <%= f.text_field :content, class: "form-control" %>
+    </div>
+    <%= f.submit class: "btn btn-outline-success" %>
+  <% end %>
+</div>

@@ -1,2 +1,27 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>Task List</h1>
+
+<%= link_to  "Create Task", new_task_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td>id</td>
+      <td>Title</td>
+      <td>Content</td>
+      <td>Process</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task|%>
+    <tr>
+      <td><%= task.id %></td>
+      <td><%= task.title %></td>
+      <td><%= task.content %></td>
+       <td>
+         <%= link_to  "Edit",  edit_task_path(task) %>
+         <%= link_to  "Destroy",  task_path(task), method: "deleate", data: { confirm: "Are you sure?" } %>
+       </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
