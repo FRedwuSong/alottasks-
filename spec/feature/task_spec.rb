@@ -20,4 +20,24 @@ RSpec.feature "Task CRUD", :type => :feature do
 
     expect(page).to have_text("Success Edit")
   end
+  describe 'sorting' do
+    let(:asc_result) { Task.order(created_at: :asc).pluck(:title) }
+    let(:desc_result) { Task.order(created_at: :desc).pluck(:title) }
+
+    before do
+      visit tasks_path
+    end
+
+    it 'by "created_at" ASC' do
+      text_initial_load = all('tbody>tr>td:nth-child(1)').map(&:text)
+
+      expect(text_initial_load).to eq(asc_result)
+    end
+
+    it 'by "created_at" DESC' do
+      text_initial_load = all('tbody>tr>td:nth-child(1)').map(&:text)
+      
+      expect(text_initial_load).to eq(desc_result)
+    end
+  end
 end
