@@ -8,7 +8,7 @@ RSpec.feature "Task CRUD", :type => :feature do
     fill_in "task_content", :with => "content"
     click_button "Create Task"
 
-    expect(page).to have_text("task create succefully")
+    expect(page).to have_text(I18n.t('tasks.create.notice'))
   end
   scenario "User updates a task" do
     @task = FactoryBot.create(:task)
@@ -18,7 +18,7 @@ RSpec.feature "Task CRUD", :type => :feature do
     fill_in "task_content", :with => "update_content"
     click_button "Update Task"
 
-    expect(page).to have_text("Success Edit")
+    expect(page).to have_text(I18n.t('tasks.update.notice'))
   end
   describe 'sorting' do
     let(:asc_result) { Task.order(created_at: :asc).pluck(:title) }
