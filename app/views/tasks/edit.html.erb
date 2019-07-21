@@ -1,11 +1,14 @@
 <h1><%= t("common.edit_task") %></h1>
-<%= form_for @task do |f| %>
-<%= f.label :title, "Title" %>
-<%= f.text_field :title %> <br/>
-
-<%= f.label :content, "Content" %>
-<%= f.text_field :content %> <br/>
-
-<%= f.submit %>
-
-<% end %>
+<div>
+  <%= form_for @task do |f| %>
+    <div>
+      <%= f.label :title, t("common.title") %>
+      <%= f.text_field :title %> <br/>
+    </div>
+    <div>
+      <%= f.label :content, t("common.content") %>
+      <%= f.text_field :content %> <br/>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
