@@ -2,11 +2,11 @@
 <div>
   <%= form_for @task do |f|%>
     <div>
-      <%= f.label :title %>
+      <%= f.label :title, t("common.title") %>
       <%= f.text_field :title %>
     </div>
     <div>
-      <%= f.label :content %>
+      <%= f.label :content, t("common.content") %>
       <%= f.text_field :content %>
     </div>
     <%= f.submit %>
