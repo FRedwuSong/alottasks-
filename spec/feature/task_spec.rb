@@ -6,7 +6,7 @@ RSpec.feature "Task CRUD", :type => :feature do
 
     fill_in "task_title", :with => "title"
     fill_in "task_content", :with => "content"
-    click_button "Create Task"
+    first('input[type="submit"]').click
 
     expect(page).to have_text("task create succefully")
   end
@@ -16,7 +16,7 @@ RSpec.feature "Task CRUD", :type => :feature do
 
     fill_in "task_title", :with => "update_title"
     fill_in "task_content", :with => "update_content"
-    click_button "Update Task"
+    first('input[type="submit"]').click
 
     expect(page).to have_text("Success Edit")
   end
